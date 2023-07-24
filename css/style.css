@@ -12,27 +12,28 @@ body {
 }
 
 .left-side {
-    width: 40%;
-    border: 1px solid blue;
+    width: 35%;
+    border-right: 1px solid lightgray;
 }
 
 .right-side {
-    border: 1px solid rgb(255, 94, 0);
+    width: 65%;
 }
 
 .my-container {
     margin: 45px auto;
-    border: 1px solid red;
     width: 100%;
     height: 90vh;
     position: relative;
+    border: 1px solid lightgray;
 }
 
 .bg-nav, .search-bar {
     background-color: #EAEAEA;
 }
 
-.user-img img {
+.user-img img,
+.contact-chat-img img {
     width: 50px;
 }
 
@@ -41,12 +42,14 @@ body {
 }
 
 .user-button button, 
-.input-group button  {
+.input-group button,
+.contact-chat-button button {
     color: #B1B1B1;
 }
 
 .btn-link:hover,
-.input-group button:hover  {
+.input-group button:hover,
+.contact-chat-button button:hover {
     color: #525252;
 }
 
@@ -77,15 +80,40 @@ body {
     width: 15%;
 }
 
-.chats-profiles {
-    overflow: auto;
+.chats-profiles,
+.chat-container {
+    overflow-y: scroll;
+    overflow-x: hidden; 
 }
 
 .contact {
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 .contact-info .status-message,
+.contact-chat-info .status-message,
 .contact-time {
     font-size: .8rem;
+}
+
+.chat-container {
+    background-image: url(../img/mine.jpg);
+}
+
+.message-green,
+.message-white {
+    min-height: 56px;
+}
+
+.message-green {
+    background-color: #D5F9BA;
+}
+
+.message-white {
+    background-color: #ffffff;
+}
+
+.time {
+    font-size: .7rem;
+    align-self: flex-end;
 }

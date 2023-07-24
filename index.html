@@ -56,8 +56,8 @@
                     <div class="search-bar p-2">
                         <div class="input-group">
                             <button type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                            <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat"
-                                aria-describedby="search-btn">
+                            <input type="text" class="form-control rounded-0"
+                                placeholder="Cerca o inizia una nuova chat" aria-describedby="search-btn">
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                 <main class="chats-profiles bg-light flex-grow-1">
                     <div class="contact d-flex px-2 py-3">
                         <div class="contact-img">
-                        <img class="rounded-circle" src="img/avatar_1.jpg" alt="user profile pick">
+                            <img class="rounded-circle" src="img/avatar_1.jpg" alt="user profile pick">
                         </div>
                         <div class="contact-info px-3 flex-grow-1">
                             <div class="name">Michele</div>
@@ -78,8 +78,56 @@
             </div>
 
             <!-- lato destro container -->
-            <div class="right-side">
-                
+            <div class="right-side d-flex flex-column">
+                <!-- nav user -->
+                <nav class="contact-chat-nav bg-nav d-flex align-items-center p-2">
+                    <div class="contact-chat-img p-1">
+                        <img class="rounded-circle" src="img/avatar_1.jpg" alt="user profile pick">
+                    </div>
+                    <div class="contact-chat-info flex-grow-1">
+                        <div class="name">Michele</div>
+                        <div class="status-message text-secondary">Ultimo accesso oggi alle 12:00</div>
+                    </div>
+                    <div class="contact-chat-button d-flex">
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-paperclip"></i></button>
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </nav>
+
+                <!-- caht container -->
+                <div class="chat-container flex-grow-1 p-5">
+                    <div class="row mb-2 d-flex justify-content-end">
+                        <div class="col-5 message-green d-flex p-1 rounded-3 align-items-center justify-content-between">
+                            <div class="ps-2">Hai portato a spasso il cane?</div>
+                            <div class="time px-1">15:30</div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 d-flex justify-content-end">
+                        <div class="col-5 message-green d-flex p-1 rounded-3 align-items-center justify-content-between">
+                            <div class="ps-2">Ricordati di stendere i panni</div>
+                            <div class="time px-1">15:30</div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-5 message-white d-flex p-1 rounded-3 align-items-center justify-content-between">
+                            <div class="ps-2">Tutto fatto!</div>
+                            <div class="time px-1">15:30</div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="contact-chat-nav bg-nav d-flex align-items-center p-2">
+                    <div class="contact-chat-button d-flex px-3">
+                        <button class="btn btn-link p-1"><i class="fa-regular fa-face-smile"></i></button>
+                    </div>
+
+                    <input type="text" class="form-control rounded-1 p-2" placeholder="Scrivi un messaggio">
+
+                    <div class="contact-chat-button d-flex px-3">
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
