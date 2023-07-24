@@ -34,11 +34,15 @@ body {
 
 .user-img img,
 .contact-chat-img img {
-    width: 50px;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
 }
 
 .contact-img img {
     width: 65px;
+    height: 65px;
+    object-fit: cover;
 }
 
 .user-button button, 
