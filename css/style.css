@@ -20,6 +20,10 @@ body {
     width: 65%;
 }
 
+.contact {
+    text-decoration: none;
+}
+
 .my-container {
     margin: 45px auto;
     width: 100%;
