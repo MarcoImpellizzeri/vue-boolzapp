@@ -19,9 +19,69 @@
 </head>
 
 <body>
-
     <div id="app">
+        <!-- div per crere il rettangolo verde di sfondo -->
+        <div class="my-bg-green"></div>
 
+        <!-- container principale -->
+        <div class="container my-container d-flex p-0">
+            <!-- lato sinistro container -->
+            <div class="left-side d-flex flex-column">
+                <!-- nav user -->
+                <nav class="user-nav bg-nav d-flex align-items-center p-2">
+                    <div class="user-img p-1">
+                        <img class="rounded-circle" src="img/avatar_io.jpg" alt="user profile pick">
+                    </div>
+                    <div class="user-name flex-grow-1">Sofia</div>
+                    <div class="user-button d-flex">
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-circle-notch"></i></button>
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-message"></i></button>
+                        <button class="btn btn-link p-1"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </div>
+                </nav>
+
+                <!-- notification/search-bar -->
+                <div>
+                    <div class="notifications d-flex my-bg-info align-items-center p-2">
+                        <div class="my-circle rounded-circle bg-light d-flex 
+                        align-items-center justify-content-center">
+                            <i class="bell-color fa-solid fa-bell-slash"></i>
+                        </div>
+
+                        <div class="p-2">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <div><a href="#" class="text-secondary">Attiva notifiche desktop</a></div>
+                        </div>
+                    </div>
+                    <div class="search-bar p-2">
+                        <div class="input-group">
+                            <button type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" class="form-control rounded-0" placeholder="Cerca o inizia una nuova chat"
+                                aria-describedby="search-btn">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- profili chat -->
+                <main class="chats-profiles bg-light flex-grow-1">
+                    <div class="contact d-flex px-2 py-3">
+                        <div class="contact-img">
+                        <img class="rounded-circle" src="img/avatar_1.jpg" alt="user profile pick">
+                        </div>
+                        <div class="contact-info px-3 flex-grow-1">
+                            <div class="name">Michele</div>
+                            <div class="status-message text-secondary">Ultimo messaggio inviato</div>
+                        </div>
+                        <div class="contact-time text-secondary">12:00</div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- lato destro container -->
+            <div class="right-side">
+                
+            </div>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>

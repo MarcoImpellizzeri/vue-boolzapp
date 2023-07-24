@@ -1,3 +1,91 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #D9DBD3;
+}
+
+.my-bg-green {
+    background-color: #009688;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.left-side {
+    width: 40%;
+    border: 1px solid blue;
+}
+
+.right-side {
+    border: 1px solid rgb(255, 94, 0);
+}
+
+.my-container {
+    margin: 45px auto;
+    border: 1px solid red;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.bg-nav, .search-bar {
+    background-color: #EAEAEA;
+}
+
+.user-img img {
+    width: 50px;
+}
+
+.contact-img img {
+    width: 65px;
+}
+
+.user-button button, 
+.input-group button  {
+    color: #B1B1B1;
+}
+
+.btn-link:hover,
+.input-group button:hover  {
+    color: #525252;
+}
+
+.btn-check:checked+.btn, 
+.btn.active, .btn.show, 
+.btn:first-child:active, 
+:not(.btn-check)+.btn:active,
+.input-group button:active {
+    color: #B1B1B1;
+}
+
+.my-bg-info {
+    background-color: #8EDAFC;
+}
+
+.bell-color {
+    color: #8EDAFC;
+}
+
+.my-circle{
+    width: 50px;
+    height: 50px;
+}
+
+.input-group button {
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 15%;
+}
+
+.chats-profiles {
+    overflow: auto;
+}
+
+.contact {
+    border: 1px solid lightgray;
+}
+
+.contact-info .status-message,
+.contact-time {
+    font-size: .8rem;
 }
