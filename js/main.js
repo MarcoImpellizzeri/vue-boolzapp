@@ -42,17 +42,17 @@ Vue.createApp({
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
-                            message: "Hai visto l'ultimo episodio di Star Trek?",
+                            message: "Sei pronto per andare al negozio dei trenini?",
                             status: "sent",
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            message: "Era stupendo",
+                            message: "Dai scendi, ti aspetto in macchina",
                             status: "sent",
                         },
                         {
                             date: "10/01/2020 16:15:22",
-                            message: "Si l'ho visto e concordo",
+                            message: "Si, solo un momento devo finire di disinfettare la camera",
                             status: "received",
                         },
                     ],
@@ -195,5 +195,10 @@ Vue.createApp({
             this.selectedContact = contact; 
             console.log(contact);
         },
+        // newMessage(selectContact) {
+        //     const messageNew = { ...this.selectContact.messages}
+        //     this.selectContact.messages.push(messageNew)
+        //     console.log(messageNew)
+        // },
     },
 }).mount("#app")
