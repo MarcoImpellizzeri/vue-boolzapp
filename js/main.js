@@ -35,6 +35,12 @@
 Vue.createApp({
     data() {
         return {
+            selectedContact: null,
+            newMessageObj: {
+                date: "28/03/2020 10:20:10",
+                message: "",
+                status: "sent",
+            },
             contact: [
                 {
                     name: "Sheldon",
@@ -178,27 +184,40 @@ Vue.createApp({
                         },
                     ],
                 },
-                
-            ],selectedContact: null
+
+            ],
         }
     },
-    mounted() {
-        // Controlla se ci sono contatti nell'array
-        if (this.contact.length > 0) {
-            // Imposta il primo contatto come contatto selezionato di base
-            this.selectedContact = this.contact[0];
-        }
+    beforeMount() {
+        // Imposta il primo contatto come contatto selezionato di base
+        this.selectedContact = this.contact[0];
     },
     methods: {
-        selectContact(contact) {
+        selectContact(oneContact) {
             // Memorizza il contatto selezionato
-            this.selectedContact = contact; 
-            console.log(contact);
+            this.selectedContact = oneContact;
+            console.log(oneContact);
         },
-        // newMessage(selectContact) {
-        //     const messageNew = { ...this.selectContact.messages}
-        //     this.selectContact.messages.push(messageNew)
-        //     console.log(messageNew)
-        // },
-    },
+        newMessage() {
+            const inputMessage = { ...this.newMessageObj };
+            // push sull'array selectedContact.messages che e` 
+            // l'array di messaggi della chat selezionata
+            this.selectedContact.messages.push(inputMessage); 
+            // reset del campo di input dopo il push
+            this.newMessageObj.message = ""; 
+            // do un tempo per la risposta e richiamo replyMessage
+            setTimeout(this.replyMessage, 1500); 
+        },
+        replyMessage() {
+            // creo nella funzione una costante che sarebbe 
+            // l'oggetto del messaggio
+            const replyObj = {
+                date: "28/03/2020 10:20:11",
+                message: "Bazinga!",
+                status: "received",
+            };
+            // e lo pusho all'interno dell'array
+            this.selectedContact.messages.push(replyObj);
+        },
+    }
 }).mount("#app")

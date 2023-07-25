@@ -121,8 +121,8 @@
                         <button class="btn btn-link p-1"><i class="fa-regular fa-face-smile"></i></button>
                     </div>
 
-                    <input type="text" class="form-control rounded-1 p-2" placeholder="Scrivi un messaggio">
-                        <!-- v-model="newMessage.messages" @keyup.enter="newMessage" -->
+                    <input type="text" class="form-control rounded-1 p-2" placeholder="Scrivi un messaggio"
+                    v-model="newMessageObj.message" @keyup.enter="newMessage">
 
                     <div class="contact-chat-button d-flex px-3">
                         <button class="btn btn-link p-1"><i class="fa-solid fa-microphone"></i></button>
