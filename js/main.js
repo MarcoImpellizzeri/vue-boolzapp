@@ -100,7 +100,7 @@ Vue.createApp({
                         },
                         {
                             date: "28/03/2020 16:15:22",
-                            message: "Ah scusa!",
+                            message: "Ah scusa tesoro",
                             status: "received",
                         },
                     ],
@@ -116,7 +116,7 @@ Vue.createApp({
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            message: "Si, ma preferirei andare al cinema",
+                            message: "Si, ma preferirei andare al cinema. C'e` un film con Sandra Bullock",
                             status: "received",
                         },
                     ],
@@ -192,6 +192,16 @@ Vue.createApp({
         // Imposta il primo contatto come contatto selezionato di base
         this.selectedContact = this.contact[0];
     },
+    // si usa "computed:" per creare funzioni che ritornano un calcolo
+    computed: {
+        filteredContacts() {
+            // creazione di un nuovo array filtrato basato sull'array contact usando ".filter"
+            // quando filtra prende un singolo elemento dell'array "this.contact" rinominato "contactElement"
+            // e controlla se il suo ".nome" contiene la stringa inserita nella barra di ricerca ".includes(this.search)" 
+            // (convertendo tutto in lettere minuscole)
+            return this.contact.filter(contactElement => contactElement.name.toLowerCase().includes(this.search.toLowerCase()));
+        }
+    },
     methods: {
         selectContact(oneContact) {
             // Memorizza il contatto selezionato
@@ -199,6 +209,7 @@ Vue.createApp({
             console.log(oneContact);
         },
         newMessage() {
+            // creo una costante che ha tutto il contenuto di "newMessageObj"
             const inputMessage = { ...this.newMessageObj };
             // push sull'array selectedContact.messages che e` 
             // l'array di messaggi della chat selezionata
@@ -219,5 +230,14 @@ Vue.createApp({
             // e lo pusho all'interno dell'array
             this.selectedContact.messages.push(replyObj);
         },
+        searchContacts() {
+            if (this.search === "") {
+                // Se la barra di ricerca è vuota, restituisce tutti i contatti
+                return this.contact; 
+            } else {
+                // Restituisce i contatti filtrati in base all'input
+                return this.filteredContacts; 
+            }
+        }
     }
 }).mount("#app")

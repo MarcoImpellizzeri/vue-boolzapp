@@ -66,7 +66,7 @@
 
                 <!-- profili chat -->
                 <main class="chats-profiles bg-light flex-grow-1">
-                    <a href="#0" class="contact d-flex px-2 py-3" v-for="oneProfile in contact"
+                    <a href="#0" class="contact d-flex px-2 py-3" v-for="oneProfile in searchContacts()"
                         @click="selectContact(oneProfile)">
                         <div class="contact-img">
                             <img class="rounded-circle" :src="oneProfile.avatar" alt="user profile pick">
