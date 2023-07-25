@@ -53,11 +53,13 @@
                             <div><a href="#" class="text-secondary">Attiva notifiche desktop</a></div>
                         </div>
                     </div>
+
+                    <!-- barra di ricerca -->
                     <div class="search-bar p-2">
                         <div class="input-group">
                             <button type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             <input type="text" class="form-control rounded-0"
-                                placeholder="Cerca o inizia una nuova chat" aria-describedby="search-btn">
+                            v-model="search" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                 </div>

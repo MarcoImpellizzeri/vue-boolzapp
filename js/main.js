@@ -184,8 +184,8 @@ Vue.createApp({
                         },
                     ],
                 },
-
             ],
+            search: "",
         }
     },
     beforeMount() {
@@ -202,11 +202,11 @@ Vue.createApp({
             const inputMessage = { ...this.newMessageObj };
             // push sull'array selectedContact.messages che e` 
             // l'array di messaggi della chat selezionata
-            this.selectedContact.messages.push(inputMessage); 
+            this.selectedContact.messages.push(inputMessage);
             // reset del campo di input dopo il push
-            this.newMessageObj.message = ""; 
+            this.newMessageObj.message = "";
             // do un tempo per la risposta e richiamo replyMessage
-            setTimeout(this.replyMessage, 1500); 
+            setTimeout(this.replyMessage, 1500);
         },
         replyMessage() {
             // creo nella funzione una costante che sarebbe 
