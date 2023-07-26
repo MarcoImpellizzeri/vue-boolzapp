@@ -218,6 +218,17 @@ Vue.createApp({
             this.newMessageObj.message = "";
             // do un tempo per la risposta e richiamo replyMessage
             setTimeout(this.replyMessage, 1500);
+            // si usa "this.$nextTick" per far si che lo scroll del container a cui ho dato
+            // 'ref="msgsContainer"' si posiozioni in basso in base all'altezza del container
+            this.$nextTick(() => {
+                this.$refs.msgsContainer.scrollTop = this.$refs.msgsContainer.scrollHeight;
+            });
+            // uso setTimeout che fa la stessa cosa di "this.$nextTick" con "1501" che e superiore 
+            // al tempo del timeout del messaggio di risposta cosi da rifarlo alla risposta del messaggio
+            setTimeout(() => {
+                this.$refs.msgsContainer.scrollTop = this.$refs.msgsContainer.scrollHeight;
+            }, 1501);
+
         },
         replyMessage() {
             // creo nella funzione una costante che sarebbe 
@@ -233,11 +244,11 @@ Vue.createApp({
         searchContacts() {
             if (this.search === "") {
                 // Se la barra di ricerca è vuota, restituisce tutti i contatti
-                return this.contact; 
+                return this.contact;
             } else {
                 // Restituisce i contatti filtrati in base all'input
-                return this.filteredContacts; 
-            }
+                return this.filteredContacts;
+            };
         }
     }
 }).mount("#app")
