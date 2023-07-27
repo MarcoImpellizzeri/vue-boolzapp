@@ -211,6 +211,10 @@ Vue.createApp({
         newMessage() {
             // creo una costante che ha tutto il contenuto di "newMessageObj"
             const inputMessage = { ...this.newMessageObj };
+            // modifico la data del messaggio inviato usando
+            // "new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()"
+            // che fa comparire sia la data attuale che l'ora attuale
+            inputMessage.date = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString();
             // push sull'array selectedContact.messages che e` 
             // l'array di messaggi della chat selezionata
             this.selectedContact.messages.push(inputMessage);
@@ -223,18 +227,18 @@ Vue.createApp({
             this.$nextTick(() => {
                 this.$refs.msgsContainer.scrollTop = this.$refs.msgsContainer.scrollHeight;
             });
-            // uso setTimeout che fa la stessa cosa di "this.$nextTick" con "1501" che e superiore 
-            // al tempo del timeout del messaggio di risposta cosi da rifarlo alla risposta del messaggio
+            // uso setTimeout che fa la stessa cosa di "this.$nextTick"
+            // cosi da rifarlo alla risposta del messaggio
             setTimeout(() => {
                 this.$refs.msgsContainer.scrollTop = this.$refs.msgsContainer.scrollHeight;
-            }, 1501);
-
+            }, 1500);
         },
         replyMessage() {
             // creo nella funzione una costante che sarebbe 
             // l'oggetto del messaggio
             const replyObj = {
-                date: "28/03/2020 10:20:11",
+                // inserisco la data e l'ora attuale anche nel messaggio di risposta
+                date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
                 message: "Bazinga!",
                 status: "received",
             };
@@ -249,6 +253,18 @@ Vue.createApp({
                 // Restituisce i contatti filtrati in base all'input
                 return this.filteredContacts;
             };
+        },
+        // metodo per prendere l'ultimo messagio nell'array "messages"
+        getLastMessage(messages) {
+            // se l'array message ha almento un elemento
+            if (messages.length > 0) {
+                // assegna a "lastMessage" l'ultimo elemento dell'array messages 
+                const lastMessage = messages[messages.length - 1];
+                // ritorna il "message" dell'ultimo elemento dell'array "messages"
+                return lastMessage.message;
+            }
+            // altrimenti ritorna stringa vuota
+            return " ";
         }
     }
 }).mount("#app")
