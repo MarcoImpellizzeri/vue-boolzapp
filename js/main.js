@@ -127,18 +127,13 @@ Vue.createApp({
                     messages: [
                         {
                             date: "28/03/2020 10:10:40",
-                            message: "La Marianna va in campagna",
+                            message: "Sono arrivati i tuoi fumetti in fumetteria",
                             status: "received",
                         },
                         {
                             date: "28/03/2020 10:20:10",
-                            message: "Sicuro di non aver sbagliato chat?",
+                            message: "Grazie Stuart, passo piu tardi",
                             status: "sent",
-                        },
-                        {
-                            date: "28/03/2020 16:15:22",
-                            message: "Ah scusa!",
-                            status: "received",
                         },
                     ],
                 },
@@ -148,17 +143,12 @@ Vue.createApp({
                     messages: [
                         {
                             date: "28/03/2020 10:10:40",
-                            message: "La Marianna va in campagna",
-                            status: "received",
-                        },
-                        {
-                            date: "28/03/2020 10:20:10",
-                            message: "Sicuro di non aver sbagliato chat?",
+                            message: "Sheldon e` impazzito!",
                             status: "sent",
                         },
                         {
-                            date: "28/03/2020 16:15:22",
-                            message: "Ah scusa!",
+                            date: "28/03/2020 10:20:10",
+                            message: "Si lo so",
                             status: "received",
                         },
                     ],
@@ -169,17 +159,17 @@ Vue.createApp({
                     messages: [
                         {
                             date: "28/03/2020 10:10:40",
-                            message: "La Marianna va in campagna",
+                            message: "Sai dov'e` Howard?",
                             status: "received",
                         },
                         {
                             date: "28/03/2020 10:20:10",
-                            message: "Sicuro di non aver sbagliato chat?",
+                            message: "Non ne ho idea, sara` con Raji",
                             status: "sent",
                         },
                         {
                             date: "28/03/2020 16:15:22",
-                            message: "Ah scusa!",
+                            message: "Molto probabilmete hai ragione",
                             status: "received",
                         },
                     ],
